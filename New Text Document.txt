@@ -1,0 +1,40 @@
+TABLE 1:
+
+
+SELECT * from students;
+SELECT * FROM `students` WHERE id=1;
+SELECT * FROM `students` WHERE name="lamia";
+SELECT name, age, email FROM `students`;
+SELECT name, age, email FROM `students` WHERE name="ripa";
+UPDATE students SET name="tamanna", email="tam@gmail.com", age=24;
+DELETE FROM `students` WHERE id=4;
+SELECT* FROM students WHERE name="tamanna" AND age=24;
+SELECT* FROM students WHERE name="tamanna" OR age=24;
+SELECT* FROM students WHERE name LIKE "M%";
+SELECT* FROM students WHERE name LIKE " %a% ";
+SELECT* FROM students WHERE name LIKE " n% ";
+SELECT* FROM 'students' ORDER BY age;
+SELECT* FROM 'students' ORDER BY age DESC;
+SELECT* FROM 'students' ORDER BY age ASC;
+SELECT * FROM students WHERE NOT name='tamanna'; 
+
+
+
+
+TABLE 2:
+
+SELECT * FROM students LIMIT 3;
+SELECT * FROM students LIMIT 3 OFFSET 3;
+SELECT * FROM Customers
+WHERE Country='Germany'
+LIMIT 3;
+SELECT COUNT(id) FROM students;
+SELECT AVG(city) FROM students;
+SELECT * FROM students WHERE name LIKE 'a%';
+SELECT * FROM students WHERE name LIKE '%or%';
+SELECT * FROM students WHERE city IN ('berlin');
+SELECT * FROM students ORDER BY city DESC;
+SELECT * FROM students ORDER BY city, name;
+SELECT * FROM students ORDER BY city ASC, name DESC;
+SELECT * FROM Customers
+WHERE Country = 'Germany' AND City = 'Berlin';
